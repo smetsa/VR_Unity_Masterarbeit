@@ -125,6 +125,7 @@ public class Ablaufen : MonoBehaviour
             if (timer >= maxTimerDuration)
             {
                 isDelaying = false;
+                alreadyTriggered = true; // Markiere den Trigger als bereits aktiviert
                 GoToNextWaypoint();
             }
         }
