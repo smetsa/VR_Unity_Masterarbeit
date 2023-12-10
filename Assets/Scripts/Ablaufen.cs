@@ -8,10 +8,19 @@ public class Ablaufen : MonoBehaviour
     public float movementSpeed = 2.0f;
     public float rotationSpeed = 5.0f;
     public float delayAtWaypoint = 10.0f;
+    public GameObject check;
+    public GameObject player;
+    public bool alreadyTriggered = false; // Variable, um zu überprüfen, ob der Trigger bereits aktiviert wurde
+    private bool timerStarted = false; // Variable, um zu überprüfen, ob der Timer gestartet wurde
+    private float timer = 0f;
+    private float maxTimerDuration = 30f; // Maximaldauer des Timers in Sekunden
+
     private int currentWaypointIndex = 0;
     private Transform targetWaypoint;
     private bool reachedDestination = false;
     public bool isDelaying = false;
+
+
 
     private Animator animator;
     public AudioSource audioSource;
@@ -26,9 +35,10 @@ public class Ablaufen : MonoBehaviour
         }
     }
 
+
+
     private void Update()
     {
-
         if (!reachedDestination)
         {
             Debug.Log("MOVE");
@@ -39,6 +49,8 @@ public class Ablaufen : MonoBehaviour
             StartCoroutine(DelayAtWaypoint());
         }
     }
+
+  
 
     private void MoveToWaypoint()
     {
@@ -65,16 +77,59 @@ public class Ablaufen : MonoBehaviour
 
     private IEnumerator DelayAtWaypoint()
     {
-        Debug.Log("Waiting at waypoint " + currentWaypointIndex);
-        animator.SetTrigger("Warten_Kontrolle");
-        audioSource.Pause();
-        isDelaying = true;
-        yield return new WaitForSeconds(delayAtWaypoint);
-        isDelaying = false;
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
-        Debug.Log("STOP");
-        GoToNextWaypoint();
+        if (distanceToPlayer < 1.3f && !alreadyTriggered)
+        {
+            animator.SetTrigger("Warten_Kontrolle");
+            audioSource.Pause();
+            isDelaying = true;
+            if (check.activeSelf)
+            {
+                animator.SetTrigger("Warten_Kontrolle");
+                audioSource.Pause();
+                alreadyTriggered = true; // Markiere den Trigger als bereits aktiviert
+                isDelaying = false;
+                GoToNextWaypoint();
+                
+            }
+            else if (!timerStarted)
+            {
+                // Starte den Timer, wenn "Check" nicht aktiv ist und der Timer noch nicht gestartet wurde
+                timerStarted = true;
+                timer = 0f;
+            }
+        }
+        else
+        {
+            Debug.Log("Waiting at waypoint " + currentWaypointIndex);
+            animator.SetTrigger("Warten_Kontrolle");
+            audioSource.Pause();
+            isDelaying = true;
+            yield return new WaitForSeconds(delayAtWaypoint);
+            isDelaying = false;
+
+            Debug.Log("STOP");
+
+            GoToNextWaypoint();
+        }
+
+        // Reset des Timers, wenn sich der Spieler außerhalb des Bereichs befindet
+        timerStarted = false;
+        timer = 0f;
+
+        // Wenn der Timer gestartet wurde und noch nicht abgelaufen ist
+        if (timerStarted && timer < maxTimerDuration)
+        {
+            timer += Time.deltaTime; // Timer hochzählen
+            if (timer >= maxTimerDuration)
+            {
+                isDelaying = false;
+                GoToNextWaypoint();
+            }
+        }
     }
+
 
     private void GoToNextWaypoint()
     {
