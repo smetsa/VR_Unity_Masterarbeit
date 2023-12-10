@@ -14,6 +14,7 @@ public class Ablaufen : MonoBehaviour
     private bool isDelaying = false;
 
     private Animator animator;
+    public AudioSource audioSource;
 
     private void Start()
     {
@@ -27,7 +28,7 @@ public class Ablaufen : MonoBehaviour
 
     private void Update()
     {
-        
+
         if (!reachedDestination)
         {
             Debug.Log("MOVE");
@@ -66,6 +67,7 @@ public class Ablaufen : MonoBehaviour
     {
         Debug.Log("Waiting at waypoint " + currentWaypointIndex);
         animator.SetTrigger("Warten_Kontrolle");
+        audioSource.Pause();
         isDelaying = true;
         yield return new WaitForSeconds(delayAtWaypoint);
         isDelaying = false;
@@ -79,6 +81,8 @@ public class Ablaufen : MonoBehaviour
         reachedDestination = false;
         Debug.Log("weitergehn");
         animator.SetTrigger("Weitergehen");
+        audioSource.Play();
+
         //yield return new WaitForSeconds(delayAtWaypoint);
 
         if (currentWaypointIndex < waypoints.Length)
