@@ -1,0 +1,196 @@
+fileFormatVersion: 2
+guid: c6005b349eb922b418e6727deef2dcbe
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: LondonTubeCar
+    100004: PassengerCar
+    100006: Wheels01
+    100008: Wheels01 1
+    100010: Wheels02
+    100012: Wheels02 1
+    100014: Wheels03
+    100016: Wheels03 1
+    100018: Wheels04
+    100020: Wheels04 1
+    400000: //RootNode
+    400002: LondonTubeCar
+    400004: PassengerCar
+    400006: Wheels01
+    400008: Wheels01 1
+    400010: Wheels02
+    400012: Wheels02 1
+    400014: Wheels03
+    400016: Wheels03 1
+    400018: Wheels04
+    400020: Wheels04 1
+    2100000: LightGreyMetalShader
+    2100002: RedMetalShader
+    2100004: WhiteMetalShader
+    2100006: BlueMetalShader
+    2100008: TrainStationTextShader
+    2100010: BeigeMetalShader
+    2100012: GreenButtonShader
+    2100014: GreyMetalShader
+    2100016: Metal01_Shader
+    2100018: WhiteLightShader
+    2100020: StainlessSteelShader
+    2100022: OrangeLightShader
+    2100024: SeatCoversShader
+    2100026: DecalsShader
+    2100028: BlackRubberShader
+    2100030: BlueMonitorShader
+    2100032: FloorShader
+    2100034: RubberFloorTexture
+    2100036: RedPlastic
+    2100038: GreyPlasticShader
+    2100040: WhitePlasticShader
+    2100042: Poster1Shader
+    2100044: Glass_Dark
+    2100046: DarkMetalShader
+    2100048: Poster2Shader
+    2100050: UndergroundMapsShader
+    2100052: LightBlueMetalShader
+    2100054: YellowMetalShader
+    2100056: DecalsShader1
+    2100058: RubberFloorTexture1
+    2100060: StainlessSteelShader1
+    2100062: SeatCoversShader1
+    2100064: RedPlastic1
+    2100066: GreyPlasticShader1
+    2100068: WhitePlasticShader1
+    2100070: Poster1Shader1
+    2100072: BlackRubberShader1
+    2100074: Glass_Dark1
+    2100076: DarkMetalShader1
+    2100078: Poster2Shader1
+    2100080: UndergroundMapsShader1
+    2100082: WhiteLightShader1
+    2100084: LightBlueMetalShader1
+    2100086: YellowMetalShader1
+    2100088: Metal01_Shader1
+    2100090: FloorShader1
+    2100092: RedMetalShader1
+    2100094: BeigeMetalShader1
+    2100096: TrainStationTextShader1
+    2100098: WhiteMetalShader1
+    2100100: BlueMetalShader1
+    2100102: LightGreyMetalShader1
+    2300000: LondonTubeCar
+    2300002: PassengerCar
+    2300004: Wheels01
+    2300006: Wheels01 1
+    2300008: Wheels02
+    2300010: Wheels02 1
+    2300012: Wheels03
+    2300014: Wheels03 1
+    2300016: Wheels04
+    2300018: Wheels04 1
+    3300000: LondonTubeCar
+    3300002: PassengerCar
+    3300004: Wheels01
+    3300006: Wheels01 1
+    3300008: Wheels02
+    3300010: Wheels02 1
+    3300012: Wheels03
+    3300014: Wheels03 1
+    3300016: Wheels04
+    3300018: Wheels04 1
+    4300000: LondonTubeCar
+    4300002: PassengerCar
+    4300004: Wheels01
+    4300006: Wheels02
+    4300008: Wheels03
+    4300010: Wheels04
+    4300012: Wheels01
+    4300014: Wheels02
+    4300016: Wheels03
+    4300018: Wheels04
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
