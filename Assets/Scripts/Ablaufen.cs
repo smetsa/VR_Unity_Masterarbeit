@@ -11,7 +11,7 @@ public class Ablaufen : MonoBehaviour
     private int currentWaypointIndex = 0;
     private Transform targetWaypoint;
     private bool reachedDestination = false;
-    private bool isDelaying = false;
+    public bool isDelaying = false;
 
     private Animator animator;
     public AudioSource audioSource;
