@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/My_Scenes/Master Scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/My_Scenes/Master Scene 1.unity
     guid: f5595516263feb3478183406f5b61dec
+  - enabled: 1
+    path: Assets/My_Scenes/NewLisa_Master Scene 2.unity
+    guid: 34907aa9b54a7234a8f16a7bfe3d8e77
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 357a7cc834e99f543bf7a086ea6afa49,
       type: 2}
